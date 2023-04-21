@@ -1,0 +1,77 @@
+.productContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(20, auto);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.product {
+    grid-template-columns: 40% 25% 35%;
+    grid-template-areas:
+    "name img tocart"
+    "cat img tocart"
+    "price img tocart"
+    "desc desc tocart";
+    padding: 0;
+    display: grid;
+    grid-row-gap: 1em;
+}
+
+.product:nth-child(even) {
+    background-color: #fff;
+}
+
+.product:nth-child(odd) {
+    background-color: #dcdcdc;
+}
+
+.product:nth-child(even) button {
+    background-color: #00a2d7;
+}
+
+.product:nth-child(odd) button {
+    background-color: #008cba;
+}
+
+.productPrice {
+    grid-area: price;
+}
+
+.productImage {
+    grid-area: img;
+    max-width: 50%;
+    height: auto;
+    padding: 1em;
+}
+
+.productTitle {
+    grid-area: name;
+    padding: 1em;
+}
+
+.product p {
+    padding: 1em;
+    font-size: 1.2rem;
+}
+
+.product p span {
+    font-weight: bold;
+}
+
+.product button {
+    grid-area: tocart;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.productDescription {
+    grid-area: desc;
+    font-size: .6rem;
+}
+
+.productCategory {
+    grid-area: cat;
+}

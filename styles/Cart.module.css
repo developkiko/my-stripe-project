@@ -1,0 +1,39 @@
+/* Cart.module.css */
+
+.cartItem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cartItemImage {
+    max-width: 100%;
+}
+
+.cartItemTitle {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.cartItemPrice {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cartItemButton {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.clearCartButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
