@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Cart.module.css';
-import { CartItem } from '../interfaces';
+import { CartItem } from '../types';
 import Head from "next/head";
 
 export interface Props {

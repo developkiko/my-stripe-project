@@ -1,8 +1,15 @@
 import React from 'react';
 import styles from '../styles/Products.module.css';
-import {Product, ProductProps} from '../interfaces';
+import {Product, CartItem} from '../types';
 
-const Products: React.FC<ProductProps> = ({ products, addToCart }) => {
+export type AddToCartFunction = (product: CartItem) => void;
+
+interface Props {
+    products: Product[];
+    addToCart: AddToCartFunction;
+}
+
+const Products: React.FC<Props> = ({ products, addToCart }) => {
     if (!products || products.length <= 0) return <>Products not found!</>;
 
     const handleAddToCart = (product: Product) => {
