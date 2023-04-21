@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from '../styles/Cart.module.css';
-import { CartItem, CartProps } from '../interfaces';
+import { CartItem } from '../interfaces';
 import Head from "next/head";
 
-const Cart: React.FC<CartProps> = ({ cart, removeFromCart, clearCart }) => {
+export interface Props {
+    cart: CartItem[];
+    removeFromCart: (productId: number) => void;
+    clearCart: () => void;
+    cartTotal: number;
+}
+
+const Cart: React.FC<Props> = ({ cart, removeFromCart, clearCart }) => {
     const cartItems: { [id: string]: CartItem } = {};
 
     cart.forEach((item) => {
